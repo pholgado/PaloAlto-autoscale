@@ -54,16 +54,16 @@ https://github.com/PaloAltoNetworks/azure-autoscaling/raw/master/Version-1-1/vid
 # Deploy Buttons   
 
 ***Infra Deployment***   
-[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FPaloAltoNetworks%2Fazure-autoscaling%2Fmaster%2FVersion-1-1%2Finfra%2FazureDeploy.json)   
+[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpholgado%2FPaloAlto-autoscale%2Fmaster%2FVersion-1-1%2Finfra%2FazureDeploy.json)   
 
 ***Inbound Deployment***  
-[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FPaloAltoNetworks%2Fazure-autoscaling%2Fmaster%2FVersion-1-1%2Finbound%2FazureDeploy.json)  
+[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpholgado%2FPaloAlto-autoscale%2Fmaster%2FVersion-1-1%2Finbound%2FazureDeploy.json)  
 
 ***Hub Deployment***  
-[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.inbcu.com.com%2FCCOE-Azure-PaloAlto-Autoscale%2Forig-paloalto%2FVersion-1-1%2Fhub%2FazureDeploy.json)
+[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpholgado%2FPaloAlto-autoscale%2Fmaster%2FVersion-1-1%2Fhub%2FazureDeploy.json)
 
 ***App Deployment***  
-[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FPaloAltoNetworks%2Fazure-autoscaling%2Fmaster%2FVersion-1-1%2Fapp%2FazureDeploy.json)
+[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpholgado%2FPaloAlto-autoscale%2Fmaster%2FVersion-1-1%2Fapp%2FazureDeploy.json)
 
 
 # Support Policy
