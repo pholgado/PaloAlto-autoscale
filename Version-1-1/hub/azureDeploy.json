@@ -250,7 +250,7 @@
         "namingInfix": "[substring(uniqueString(resourceGroup().id), 0, 6)]",
         "location"   : "[resourceGroup().location]",
         "rgname"     : "[resourceGroup().name]",
-        "snet"       : "snet",
+        "snet"       : "[concat('snet')]",
         "networkSecurityGroupName": "[concat(variables('rgname'), '-nsg' )]",
         "hubLoadBalancerSku": "Standard",
         "vmssName": "[concat('pavmfw', variables('namingInfix'))]",
