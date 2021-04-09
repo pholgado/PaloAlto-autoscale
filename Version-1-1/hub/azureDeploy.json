@@ -247,7 +247,7 @@
         "networkApiVersion": "2017-06-01",
         "computeApiVersion": "2017-03-30",
         "appInsightsApiVersion": "2018-05-01", 
-        "namingInfix": "[substring(uniqueString(resourceGroup().id), 0, 5)]",
+        "namingInfix": "[substring(uniqueString(resourceGroup().id), 0, 6)]",
         "location"   : "[resourceGroup().location]",
         "rgname"     : "[resourceGroup().name]",
         "networkSecurityGroupName": "[concat(variables('rgname'), '-nsg' )]",
