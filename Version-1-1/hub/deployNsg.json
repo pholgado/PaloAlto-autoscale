@@ -217,11 +217,11 @@
 	],
 	"outputs": {
         "MgmtSubnetNsgName": {
-            "value": "[concat(parameters('nsgName'), '-mgmt')]",
+            "value": "[concat('nsg-', parameters('MgmtSnetName'))]",
             "type": "string"
         },
         "UntrustSubnetNsgName": {
-            "value": "[concat(parameters('nsgName'), '-untrust')]",
+            "value": "[concat('nsg-', parameters('UntrustSnetName'))]",
             "type": "string"
         }
 	}
