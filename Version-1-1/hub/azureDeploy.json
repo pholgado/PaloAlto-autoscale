@@ -251,7 +251,7 @@
         "location"   : "[resourceGroup().location]",
         "rgname"     : "[resourceGroup().name]",
         "snet": "snet",
-        "networkSecurityGroupName": "'nsg-'[concat(variables('snet'))]",
+        "networkSecurityGroupName": "'nsg-', [concat(variables('snet'))]",
         "hubLoadBalancerSku": "Standard",
         "vmssName": "[concat('azpanvmfw', variables('namingInfix'))]",
         "fwLbName": "[concat(variables('vmssName'), '_inbound_hub_fw_lb_', variables('namingInfix'))]",
