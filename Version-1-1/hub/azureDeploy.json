@@ -344,6 +344,12 @@
                     },
                     "virtualNetworkAddressPrefix": {
                         "value": "[parameters('virtualNetworkAddressPrefix')]"
+                    },
+                    "MgmtSnetName": {
+                        "value": "[variables('MgmtSubnetName')]"
+                    },
+                    "UntrustSnetName": {
+                        "value": "[variables('untrustedSubnetName')]"
                     }
                 }
             }

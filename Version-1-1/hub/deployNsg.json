@@ -13,7 +13,13 @@
 			},
 			"virtualNetworkAddressPrefix": {
 				"type": "string"
-			}
+			},
+			"MgmtSnetName": {
+				"type": "string"
+			},
+			"UntrustSnetName": {
+				"type": "string"
+			}			
 	},
 	"variables":
 	{
@@ -23,7 +29,7 @@
 	{
 		"apiVersion": "[variables('apiVersion')]",
 		"type": "Microsoft.Network/networkSecurityGroups",
-		"name": "[concat(parameters('nsgName'), '-mgmt')]",
+		"name": "[concat('nsg-', parameters('MgmtSnetName'))]",
 		"location": "[parameters('location')]",
 		"properties": {
 			"securityRules": [{
@@ -72,7 +78,7 @@
 	},
 	{
         "type": "Microsoft.Network/networkSecurityGroups",
-		"name": "[concat(parameters('nsgName'), '-untrust')]",
+		"name": "[concat('nsg-', parameters('UntrustSnetName'))]",
         "apiVersion": "2017-06-01",
         "location": "[parameters('location')]",
         "properties": {
