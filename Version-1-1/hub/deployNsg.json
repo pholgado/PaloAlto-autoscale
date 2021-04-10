@@ -64,7 +64,7 @@
 					"sourceAddressPrefix": "*",
 					"destinationAddressPrefix": "*",
 					"access": "Deny",
-					"priority": 200,
+					"priority": 4096,
 					"direction": "Inbound"
 				}
 			}]
@@ -78,15 +78,15 @@
         "properties": {
             "securityRules": [
             {
-                "name": "Port_Any",
+                "name": "DefaultDenyAny",
                 "properties": {
                     "protocol": "*",
                     "sourcePortRange": "*",
                     "destinationPortRange": "*",
                     "sourceAddressPrefix": "*",
                     "destinationAddressPrefix": "*",
-                    "access": "Allow",
-                    "priority": 100,
+                    "access": "Deny",
+                    "priority": 4096,
                     "direction": "Inbound",
                     "sourceAddressPrefixes": [],
                     "destinationAddressPrefixes": []
