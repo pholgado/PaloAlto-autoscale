@@ -184,8 +184,8 @@
         "ipConfigNametrust": "[concat('ipconfigtrust', variables('namingInfix'))]",
         "ipConfigNamemgmt": "[concat('ipconfigmgmt', variables('namingInfix'))]",
         "imagePublisher": "paloaltonetworks",
-        "imageOffer" : "vmseries-plex",
-        "version" : "9.1.6",
+        "imageOffer" : "vmseries1",
+        "version" : "9.0.6",
         "location": "[resourceGroup().location]",
         "resourceGroupName": "[resourceGroup().name]",
         "scaleMetricMap": {
@@ -264,7 +264,7 @@
                         }
                     },
                     "osProfile": {
-                        "computerNamePrefix": "[concat('azpavm', variables('namingInfix'))]",
+                        "computerNamePrefix": "[concat('pavm', variables('namingInfix'))]",
                         "adminUsername": "[parameters('adminUsername')]",
                         "adminPassword": "[parameters('adminPassword')]",
                         "customData": "[base64(parameters('customDataField'))]"
