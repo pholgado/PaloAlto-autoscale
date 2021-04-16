@@ -184,7 +184,7 @@
         "ipConfigNametrust": "[concat('ipconfigtrust', variables('namingInfix'))]",
         "ipConfigNamemgmt": "[concat('ipconfigmgmt', variables('namingInfix'))]",
         "imagePublisher": "paloaltonetworks",
-        "imageOffer" : "vmseries-plex",
+        "imageOffer" : "vmseries-flex",
         "version" : "9.1.6",
         "location": "[resourceGroup().location]",
         "resourceGroupName": "[resourceGroup().name]",
