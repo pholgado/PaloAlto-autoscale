@@ -114,6 +114,12 @@
                 "description": "Trust Subnet name"
             }
         },
+        "publicIPprefixName": {
+            "type": "string",
+            "metadata": {
+                "description": "Name of Public IP Prefix name"
+            }
+        },
         "fwLbName": {
             "type": "string",
             "metadata": {
@@ -307,7 +313,10 @@
                                         "publicIPAddressConfiguration": {
                                             "name": "hub_pavm_pip",
                                             "properties": {
-                                                "idleTimeoutInMinutes": 15
+                                                "idleTimeoutInMinutes": 15,
+                                                "PublicIpPrefix": {
+                                                    "Id": "[resourceId('Microsoft.Network/publicIPPrefixes', parameters('publicIPprefixName'))]"
+                                                  }
                                             }
                                         }
                                     }

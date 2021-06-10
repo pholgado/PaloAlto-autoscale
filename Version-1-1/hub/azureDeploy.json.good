@@ -65,9 +65,9 @@
             "type": "string",
             "allowedValues": [
                 "latest",
-                "9.0.6"
+                "9.1.6"
                 ],
-            "defaultValue": "9.0.6",
+            "defaultValue": "9.1.6",
             "metadata": {
                 "description": "VM-Series Firewall PAN OS Version"
             }
@@ -86,7 +86,7 @@
         },
         "appInsightsRegion": {
             "type" : "string",
-            "defaultValue" : "westus",
+            "defaultValue" : "eastus",
             "allowedValues": [
                 "centralcanada",
                 "centralus",
@@ -247,21 +247,22 @@
         "networkApiVersion": "2017-06-01",
         "computeApiVersion": "2017-03-30",
         "appInsightsApiVersion": "2018-05-01", 
-        "namingInfix": "[substring(uniqueString(resourceGroup().id), 0, 5)]",
+        "namingInfix": "[substring(uniqueString(resourceGroup().id), 0, 6)]",
         "location"   : "[resourceGroup().location]",
         "rgname"     : "[resourceGroup().name]",
-        "networkSecurityGroupName": "[concat(variables('rgname'), '-nsg' )]",
+        "snet": "snet",
+        "networkSecurityGroupName": "[concat('nsg-',variables('snet'))]",
         "hubLoadBalancerSku": "Standard",
-        "vmssName": "[concat('pavmfw', variables('namingInfix'))]",
-        "fwLbName": "[concat(variables('rgname'), '_inbound_hub_fw_lb_', variables('namingInfix'))]",
-        "fwLbBePoolName": "[concat(variables('rgname'), '_inbound_hub_fw_lb_backend_pool_', variables('namingInfix'))]",
-        "appInsightsName": "[concat(variables('rgname'), '-appinsights-', variables('namingInfix'))]",
-        "loadBalancerName": "[concat(variables('rgname'), '-outbound-lb' )]",
-        "MgmtSubnetName" : "[concat(parameters('virtualNetworkName'), '-mgmt-subnet')]",
-        "untrustedSubnetName" : "[concat(parameters('virtualNetworkName'), '-untrust-subnet')]",
-        "trustedSubnetName" : "[concat(parameters('virtualNetworkName'), '-trust-subnet')]",
-        "mgmtPublicIPName" : "[concat(variables('rgname'), '-mgmt-pip-', variables('namingInfix'))]",
-        "firewallVmName": "[concat(variables('rgName'), '-outbound-vm-series-firewall')]",
+        "vmssName": "[concat('azpanvmfw', variables('namingInfix'))]",
+        "fwLbName": "[concat(variables('vmssName'), '_inbound_hub_fw_lb_', variables('namingInfix'))]",
+        "fwLbBePoolName": "[concat(variables('vmssName'), '_inbound_hub_fw_lb_backend_pool_', variables('namingInfix'))]",
+        "appInsightsName": "[concat(variables('vmssName'), '-appinsights-', variables('namingInfix'))]",
+        "loadBalancerName": "[concat(variables('vmssName'), '-outbound-lb' )]",
+        "MgmtSubnetName" : "[concat(variables('snet'), '-mgmt-00')]",
+        "untrustedSubnetName" : "[concat(variables('snet'), '-pub-00')]",
+        "trustedSubnetName" : "[concat(variables('snet'), '-priv-00')]",
+        "mgmtPublicIPName" : "[concat(variables('vmssName'), '-mgmt-pip-', variables('namingInfix'))]",
+        "firewallVmName": "[concat(variables('vmssName'), '-outbound-vm-series-firewall')]",
 		"customDataField": "[concat('storage-account=', parameters('bootstrapStorageAccount'), ',access-key=', parameters('bootstrapStorageAccountAccessKey'), ',file-share=', parameters('bootstrapFileShare'),',share-directory=', parameters('bootstrapSharedDir'))]",
         "space": " "
     },
@@ -343,6 +344,12 @@
                     },
                     "virtualNetworkAddressPrefix": {
                         "value": "[parameters('virtualNetworkAddressPrefix')]"
+                    },
+                    "MgmtSnetName": {
+                        "value": "[variables('MgmtSubnetName')]"
+                    },
+                    "UntrustSnetName": {
+                        "value": "[variables('untrustedSubnetName')]"
                     }
                 }
             }

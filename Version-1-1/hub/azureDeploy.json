@@ -55,6 +55,13 @@
             },
             "defaultValue": "172.16.2.4"
         },
+        "publicIPprefixName": {
+            "type": "string",
+            "metadata": {
+                "description": "IP Address for the Internal Load Balancer in front of the Hub VM-Series Firewall."
+            },
+            "defaultValue": "pipipprefix"
+        },
         "networkSecurityGroupInboundIP": {
             "type": "string",
             "metadata": {
@@ -516,6 +523,9 @@
                     },
                     "vmLicenseHandlerUrl": {
                         "value": "[parameters('panoramaPluginMessageHandlerUrl')]"
+                    },
+                    "publicIPprefixName": {
+                        "value": "[parameters('publicIPprefixName')]"
                     }
                 }
             }
