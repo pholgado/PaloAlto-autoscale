@@ -63,9 +63,9 @@
             "type": "string",
             "allowedValues": [
                 "latest",
-                "10.1.0"
+                "9.1.6"
             ],
-            "defaultValue": "10.1.0",
+            "defaultValue": "9.1.6",
             "metadata": {
                 "description": "PAN OS Version"
             }
@@ -112,12 +112,6 @@
             "type": "string",
             "metadata": {
                 "description": "Trust Subnet name"
-            }
-        },
-        "publicIPprefixName": {
-            "type": "string",
-            "metadata": {
-                "description": "Name of Public IP Prefix name"
             }
         },
         "fwLbName": {
@@ -313,10 +307,7 @@
                                         "publicIPAddressConfiguration": {
                                             "name": "hub_pavm_pip",
                                             "properties": {
-                                                "idleTimeoutInMinutes": 15,
-                                                "PublicIpPrefix": {
-                                                    "Id": "[resourceId('Microsoft.Network/publicIPPrefixes', parameters('publicIPprefixName'))]"
-                                                  }
+                                                "idleTimeoutInMinutes": 15
                                             }
                                         }
                                     }
