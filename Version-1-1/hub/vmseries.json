@@ -191,7 +191,7 @@
         "ipConfigNamemgmt": "[concat('ipconfigmgmt', variables('namingInfix'))]",
         "imagePublisher": "paloaltonetworks",
         "imageOffer" : "vmseries-flex",
-        "version" : "9.1.6",
+        "version" : "10.1.0",
         "location": "[resourceGroup().location]",
         "resourceGroupName": "[resourceGroup().name]",
         "scaleMetricMap": {
