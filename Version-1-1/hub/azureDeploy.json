@@ -4,7 +4,7 @@
     "parameters": {
         "deployIntoExistingVnet": {
              "type": "string",
-             "defaultValue": "No",
+             "defaultValue": "Yes",
              "allowedValues": [
                     "Yes",
                     "No"
@@ -147,7 +147,7 @@
             "metadata": {
                 "description": "Azure VM size for VM-Series"
             },
-            "defaultValue": "Standard_D3_v2"
+            "defaultValue": "Standard_D4_v2"
         },
        "username": {
             "type": "string",
@@ -254,13 +254,13 @@
         "networkApiVersion": "2017-06-01",
         "computeApiVersion": "2017-03-30",
         "appInsightsApiVersion": "2018-05-01", 
-        "namingInfix": "[substring(uniqueString(resourceGroup().id), 0, 6)]",
+        "namingInfix": "[substring(uniqueString(resourceGroup().id), 1, 7)]",
         "location"   : "[resourceGroup().location]",
         "rgname"     : "[resourceGroup().name]",
         "snet": "snet",
         "networkSecurityGroupName": "[concat('nsg-',variables('snet'))]",
         "hubLoadBalancerSku": "Standard",
-        "vmssName": "[concat('azpalvmfw', variables('namingInfix'))]",
+        "vmssName": "[concat('azpanvmfw', variables('namingInfix'))]",
         "fwLbName": "[concat(variables('vmssName'), '_inbound_hub_fw_lb_', variables('namingInfix'))]",
         "fwLbBePoolName": "[concat(variables('vmssName'), '_inbound_hub_fw_lb_backend_pool_', variables('namingInfix'))]",
         "appInsightsName": "[concat(variables('vmssName'), '-appinsights-', variables('namingInfix'))]",
