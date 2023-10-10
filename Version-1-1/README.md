@@ -60,7 +60,7 @@ https://github.com/PaloAltoNetworks/azure-autoscaling/raw/master/Version-1-1/vid
 [<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpholgado%2FPaloAlto-autoscale%2Fmaster%2FVersion-1-1%2Finbound%2FazureDeploy.json)  
 
 ***Hub Deployment***  
-[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpholgado%2FPaloAlto-autoscale%2Fmaster%2FVersion-1-1%2Fhub%2FazureDeploy.json)
+[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpholgado%2FPaloAlto-autoscale%2Ftemp-branch%2FVersion-1-1%2Fhub%2FazureDeploy.json)
 
 ***Hub Deployment - 9.1.6 ***  
 [<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpholgado%2FPaloAlto-autoscale%2Fmaster%2FVersion-1-1%2Fhub-9.1.6%2FazureDeploy.json)
