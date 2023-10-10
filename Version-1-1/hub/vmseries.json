@@ -270,7 +270,7 @@
                         }
                     },
                     "osProfile": {
-                        "computerNamePrefix": "[concat('azpavm', variables('namingInfix'))]",
+                        "computerNamePrefix": "[concat('azpanvm', variables('namingInfix'))]",
                         "adminUsername": "[parameters('adminUsername')]",
                         "adminPassword": "[parameters('adminPassword')]",
                         "customData": "[base64(parameters('customDataField'))]"
