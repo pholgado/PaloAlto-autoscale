@@ -260,7 +260,7 @@
         "snet": "snet",
         "networkSecurityGroupName": "[concat('nsg-',variables('snet'))]",
         "hubLoadBalancerSku": "Standard",
-        "vmssName": "[concat('azpalovmfw', variables('namingInfix'))]",
+        "vmssName": "[concat('azpalowvdvmfw', variables('namingInfix'))]",
         "fwLbName": "[concat(variables('vmssName'), '_inbound_hub_fw_lb_', variables('namingInfix'))]",
         "fwLbBePoolName": "[concat(variables('vmssName'), '_inbound_hub_fw_lb_backend_pool_', variables('namingInfix'))]",
         "appInsightsName": "[concat(variables('vmssName'), '-appinsights-', variables('namingInfix'))]",
